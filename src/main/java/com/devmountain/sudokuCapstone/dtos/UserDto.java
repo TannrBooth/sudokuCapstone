@@ -1,5 +1,6 @@
 package com.devmountain.sudokuCapstone.dtos;
 
+import com.devmountain.sudokuCapstone.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,4 +16,16 @@ public class UserDto implements Serializable {
     private String username;
     private String password;
     private Set<HistoryDto> historyDtoSet;
+
+    public UserDto(User user) {
+        if(user.getId() != null) {
+            this.id = user.getId();
+        }
+        if(user.getUsername() != null) {
+            this.username = user.getUsername();
+        }
+        if(user.getPassword() != null) {
+            this.password = user.getPassword();
+        }
+    }
 }

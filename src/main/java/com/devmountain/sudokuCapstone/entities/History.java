@@ -1,5 +1,6 @@
 package com.devmountain.sudokuCapstone.entities;
 
+import com.devmountain.sudokuCapstone.dtos.HistoryDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -30,5 +31,11 @@ public class History {
     @ManyToOne
     @JsonBackReference
     private Puzzle puzzle;
+
+    public History(HistoryDto historyDto) {
+        if(historyDto.getId() != null) {
+            this.id = historyDto.getId();
+        }
+    }
 
 }

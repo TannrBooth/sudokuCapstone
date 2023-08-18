@@ -1,5 +1,6 @@
 package com.devmountain.sudokuCapstone.entities;
 
+import com.devmountain.sudokuCapstone.dtos.UserDto;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -28,4 +29,13 @@ public class User {
     @OneToMany
     @JsonManagedReference
     private Set<History> historySet = new HashSet<>();
+
+    public User(UserDto userDto) {
+        if (userDto.getPassword() != null) {
+            this.password = userDto.getPassword();
+        }
+        if (userDto.getUsername() != null) {
+            this.username = userDto.getUsername();
+        }
+    }
 }
