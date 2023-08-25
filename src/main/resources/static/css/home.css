@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#table {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.table-row {
+    margin: 0;
+    padding: 0;
+    height: calc(100%/9);
+    display: flex;
+    flex-direction: row;
+}
+
+.table-cell {
+    box-shadow: 0 0 0 1px;
+    height: 100%;
+    width: calc(100%/9);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+
+}
+
+#puzzle-container {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+#puzzle-border {
+    border: 3px black solid;
+    height: 100%;
+    width: 100%;
+}
+
+#cross-borders-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.cross-borders {
+    box-shadow: 0 0 0 3px;
+    height: calc(100%/3);
+    width: calc(100%/3);
+    pointer-events: none;
+
+}
+
+#level-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.level {
+    height: 35px;
+    width: 35px;
+    font-size: 25px;
+}

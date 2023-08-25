@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Puzzles")
@@ -32,7 +34,7 @@ public class Puzzle {
 
     @OneToMany
     @JsonManagedReference
-    private History history;
+    private Set<History> historySet = new HashSet<>();
 
     public Puzzle(PuzzleDto puzzleDto) {
         if (puzzleDto.getId() != null) {
