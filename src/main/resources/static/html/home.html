@@ -17,66 +17,42 @@
             <div class="difficulty" id="easy">
                 <h2>Easy</h2>
                 <div class="button-group">
-                    <button class="level">1</button>
-                    <button class="level">2</button>
-                    <button class="level">3</button>
+                    <button onclick="getPuzzleById(1)" class="level">1</button>
+                    <button onclick="getPuzzleById(2)" class="level">2</button>
+                    <button onclick="getPuzzleById(3)" class="level">3</button>
                 </div>
             </div>
             <div class="difficulty" id="medium">
                 <h2>Medium</h2>
                 <div class="button-group">
-                    <button class="level">4</button>
-                    <button class="level">5</button>
-                    <button class="level">6</button>
+                    <button onclick="getPuzzleById(4)" class="level">4</button>
+                    <button onclick="getPuzzleById(5)" class="level">5</button>
+                    <button onclick="getPuzzleById(6)" class="level">6</button>
                 </div>
             </div>
             <div class="difficulty" id="hard">
                 <h2>Hard</h2>
                 <div class="button-group">
-                    <button class="level">7</button>
-                    <button class="level">8</button>
-                    <button class="level">9</button>
+                    <button onclick="getPuzzleById(7)" class="level">7</button>
+                    <button onclick="getPuzzleById(8)" class="level">8</button>
+                    <button onclick="getPuzzleById(9)" class="level">9</button>
                 </div>
             </div>
         </div>
         <div id="puzzle-container">
             <div id="puzzle-border">
+                <div id="cross-borders-container">
+                    <div class="cross-borders"></div>
+                    <div class="cross-borders"></div>
+                    <div class="cross-borders"></div>
+                    <div class="cross-borders"></div>
+                    <div class="cross-borders"></div>
+                    <div class="cross-borders"></div>
+                    <div class="cross-borders"></div>
+                    <div class="cross-borders"></div>
+                    <div class="cross-borders"></div>
+                </div>
                 <div id="table">
-                    <div id="cross-borders-container">
-                        <div class="cross-borders"></div>
-                        <div class="cross-borders"></div>
-                        <div class="cross-borders"></div>
-                        <div class="cross-borders"></div>
-                        <div class="cross-borders"></div>
-                        <div class="cross-borders"></div>
-                        <div class="cross-borders"></div>
-                        <div class="cross-borders"></div>
-                        <div class="cross-borders"></div>
-                    </div>
-                    <div class="table-row" id="row-1">
-                        <input type="text" class="table-cell" value="" maxlength="1"/>
-                        <div class="table-cell">1.2</div>
-                        <div class="table-cell">1.3</div>
-                        <div class="table-cell">1.4</div>
-                        <div class="table-cell">1.1</div>
-                        <div class="table-cell">1.2</div>
-                        <div class="table-cell">1.3</div>
-                        <div class="table-cell">1.4</div>
-                        <div class="table-cell">1.4</div>
-                    </div>
-                    <div class="table-row" id="row-2">
-                        <div class="table-cell">2.1</div>
-                        <div class="table-cell">2.2</div>
-                        <div class="table-cell">2.3</div>
-                        <div class="table-cell">2.4</div>
-                    </div>
-                    <div class="table-row" id="row-3"></div>
-                    <div class="table-row" id="row-4"></div>
-                    <div class="table-row" id="row-5"></div>
-                    <div class="table-row" id="row-6"></div>
-                    <div class="table-row" id="row-7"></div>
-                    <div class="table-row" id="row-8"></div>
-                    <div class="table-row" id="row-9"></div>
                 </div>
             </div>
         </div>

@@ -21,6 +21,11 @@ main {
     padding: 0;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
 }
 
 .table-row {
@@ -33,7 +38,7 @@ main {
 
 .table-cell {
     box-shadow: 0 0 0 1px;
-    height: 100%;
+    height: calc(100%/9);
     width: calc(100%/9);
     margin: 0px;
     padding: 0px;
@@ -44,6 +49,14 @@ main {
     text-align: center;
     border: none;
 
+}
+
+div.table-cell {
+    color: black;
+}
+
+input.table-cell {
+    color: red;
 }
 
 #puzzle-container {
@@ -72,6 +85,7 @@ main {
     top: 0;
     left: 0;
     pointer-events: none;
+    box-shadow: 0 0 0 3px;
 }
 
 .cross-borders {

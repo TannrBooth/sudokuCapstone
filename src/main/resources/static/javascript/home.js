@@ -18,7 +18,10 @@ const headers = {
     "Content-Type": 'application/json'
 }
 
-const baseUrl = "http://localhost:8080/api/v1/puzzles/"
+const baseUrl = "http://localhost:8080/api/v1/puzzles/puzzle/"
+
+const currentPuzzle = [];
+const currentPuzzleSolution = [];
 
 const handleLogout = () => {
     let c = document.cookie.split(";");
@@ -26,3 +29,43 @@ const handleLogout = () => {
         document.cookie = /^[^=]+/.exec(c[i])[0]+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
     }
 }
+
+async function getPuzzleById(puzzleId) {
+    await fetch(baseUrl + puzzleId, {
+        method: "GET",
+        headers: headers
+    })
+        .then(res => res.json())
+        .then(data => createTable(data))
+        .catch(err => console.log(err))
+    
+}
+
+const createTable = (obj) => {
+    let start = obj.value
+    let end = obj.solution
+    currentPuzzle = start
+    currentPuzzleSolution = end
+    console.log('start:' + start)
+    console.log('end:' + end)
+    table.innerHTML = '';
+    start.forEach((num) => {
+            if(num === 0) {
+                let card = document.createElement("input")
+                card.classList.add("table-cell")
+                card.setAttribute('value','')
+                card.setAttribute('maxlength',1)
+                table.append(card)
+            }
+            else {
+                let card = document.createElement("div")
+                card.classList.add("table-cell")
+                card.innerHTML = `
+                    ${num}
+                `
+                table.append(card)
+        }
+    })    
+}
+
+getPuzzleById(1)
