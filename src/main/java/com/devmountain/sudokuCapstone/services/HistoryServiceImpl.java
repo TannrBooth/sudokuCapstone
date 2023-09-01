@@ -49,4 +49,25 @@ public class HistoryServiceImpl implements HistoryService {
         return Collections.emptyList();
     }
 
+    @Override
+    @Transactional
+    public void addHistory(Long userId, Long puzzleId, Boolean correct) {
+        History history = new History();
+        Optional<User> userOptional = userRepository.findById(userId);
+        Optional<Puzzle> puzzleOptional = puzzleRepository.findById(puzzleId);
+
+        // Needs to be an if statement that says "if check is correct check, change boolean to true", always increase check by 1
+        if(correct) {
+            history.setWin(true);
+        } else {
+            history.setWin(false);
+        }
+
+        history.setCheck_answers(1);
+
+        userOptional.ifPresent(history::setUser);
+        puzzleOptional.ifPresent(history::setPuzzle);
+        historyRepository.saveAndFlush(history);
+    }
+
 }

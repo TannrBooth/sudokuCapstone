@@ -10,4 +10,7 @@ public interface HistoryService {
     List<HistoryDto> getAllHistoryByUserId(Long userId);
 
     List<HistoryDto> getAllHistoryByPuzzleId(Long puzzleId);
+
+    @Transactional
+    void addHistory(Long userId, Long puzzleId, Boolean correct);
 }

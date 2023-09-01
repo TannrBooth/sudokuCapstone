@@ -33,7 +33,7 @@ public class Puzzle {
     private String difficulty;
 
     @OneToMany
-    @JsonManagedReference
+//    @JsonManagedReference
     private Set<History> historySet = new HashSet<>();
 
     public Puzzle(PuzzleDto puzzleDto) {

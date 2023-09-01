@@ -1,6 +1,7 @@
 package com.devmountain.sudokuCapstone.dtos;
 
 import com.devmountain.sudokuCapstone.entities.History;
+import com.devmountain.sudokuCapstone.entities.Puzzle;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,7 @@ public class HistoryDto implements Serializable {
     private Long id;
     private Boolean win;
     private Integer checkAnswers;
+    private Puzzle puzzle;
     private String userDto;
     private String PuzzleDto;
 
@@ -26,6 +28,9 @@ public class HistoryDto implements Serializable {
         }
         if(history.getCheck_answers() != null) {
             this.checkAnswers = history.getCheck_answers();
+        }
+        if(history.getPuzzle() != null) {
+            this.puzzle = history.getPuzzle();
         }
     }
 }

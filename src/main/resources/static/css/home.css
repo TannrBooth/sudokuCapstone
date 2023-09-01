@@ -6,7 +6,8 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 main {
@@ -37,7 +38,7 @@ main {
 }
 
 .table-cell {
-    box-shadow: 0 0 0 1px;
+    box-shadow: 0 0 0 1px black;
     height: calc(100%/9);
     width: calc(100%/9);
     margin: 0px;
@@ -56,7 +57,8 @@ div.table-cell {
 }
 
 input.table-cell {
-    color: red;
+    color:darkblue;
+
 }
 
 #puzzle-container {
@@ -65,7 +67,7 @@ input.table-cell {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     position: relative;
 }
 
@@ -120,5 +122,23 @@ input.table-cell {
 .level {
     height: 35px;
     width: 35px;
-    font-size: 25px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#reset-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 500px;
+    margin-bottom: 30px;
+
+}
+
+#check-button {
+    height: 60px;
+    width: 240px;
+    font-size: 30px;
 }

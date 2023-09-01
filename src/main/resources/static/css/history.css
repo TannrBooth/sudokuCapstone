@@ -1,0 +1,73 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    width: 500px;
+}
+
+tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+th {
+    background-color: gainsboro;
+}
+
+th, td {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: black 1px solid;
+    width: 33%;
+}
+
+#history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#level-history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#history-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+}
+
+.level {
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

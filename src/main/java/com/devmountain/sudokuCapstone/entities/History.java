@@ -29,7 +29,7 @@ public class History {
     private User user;
 
     @ManyToOne
-    @JsonBackReference
+//    @JsonBackReference
     private Puzzle puzzle;
 
     public History(HistoryDto historyDto) {

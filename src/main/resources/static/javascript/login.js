@@ -3,7 +3,8 @@ const loginUsername = document.getElementById('login-username');
 const loginPassword = document.getElementById('login-password');
 
 const headers = {
-    'Content-Type':'application/json'
+    "Content-Type":"application/json",
+    "Accept":"application/json"
 }
 
 const baseUrl = 'http://localhost:8080/api/v1/users'
@@ -15,6 +16,8 @@ const handleSubmit = async (e) => {
         username: loginUsername.value,
         password: loginPassword.value
     }
+
+    console.log(bodyObj)
 
     const response = await fetch(`${baseUrl}/login`, {
         method: "POST",
